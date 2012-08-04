@@ -28,4 +28,4 @@ class Greetings extends Q3AbstraceClass
 // and instantiate the class that extends the abstact class
 $helloWorld = new Greetings;
 // and then use methods that are defined by the abstract class
-echo $HelloWorld->say_hello();
+echo $helloWorld->say_hello();

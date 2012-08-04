@@ -6,7 +6,7 @@
 *
 */
 
-$filepath = 'example.txt';
+$filepath = './uploads/HandK_download_4ed65c090264a.png';
 
 //check to see if file exists
 if (file_exists($filepath)){
@@ -20,6 +20,9 @@ if (file_exists($filepath)){
 		// The question does not say that we should, but here we echo the 
 		// contents. We would need to check the mime-type and send appropriate 
 		// headers to make sure that browesers handle the output correctly
+		if (function_exists(mime_content_type)) {
+			header("Content-type: " . mime_content_type($filepath));
+		}
 		echo $readData;
 	} else {
 		echo "file exists, but we are unable to open it";

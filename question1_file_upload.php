@@ -9,8 +9,6 @@
 */
 
 
-
-
 $max_file_size_in_megabytes = 3;
 $max_file_size = $max_file_size_in_megabytes * 1048576;
 $upload_directory = './uploads';
@@ -30,8 +28,13 @@ if (isset($_FILES['userfile']))
  	$copyFile = FALSE;
  	// make sure file was uploaded
  	if ($is_upload)  {
- 		//if it was copy it to destination directory
-		$copyFile = copy($_FILES['userfile']['tmp_name'], $upload_directory.'/'.$_FILES['userfile']['name']);
+ 		// if it was copy it to destination directory
+ 		// currently this will overwrite any existing files with the same name
+ 		// one would need to modify the file name to ensure files
+ 		// are not overwritten
+		$copyFile = copy(
+			$_FILES['userfile']['tmp_name'], 
+			$upload_directory.'/'.$_FILES['userfile']['name']);
 	}
 	if ($copyFile) {
 		// if the file was succesfully uploaded and saved

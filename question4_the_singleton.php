@@ -37,8 +37,6 @@ class Q4SingletonClass
 		return self::$instance;
 	}
 
-
-
 }
 
 // this will create the first instance

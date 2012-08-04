@@ -1,14 +1,11 @@
 <?php 
-
 /**
 * Question 7:
 * Using the language of your choice, demonstrate connecting to a web server to
 * perform an HTTP; subsequently store the response in a buffer.
 */
 
-
 $url = 'http://google.com/';
-
 $c = curl_init($url);
  
 curl_setopt($c, CURLOPT_POST, 1);

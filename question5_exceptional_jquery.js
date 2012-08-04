@@ -1,5 +1,5 @@
 /**
-* Question 5
+* Question 5:
 * Extend jQuery to highlight all paragraphs in  apage with a light yellow 
 * background on the condition that the paragraph contains the class "exceptional"
 *

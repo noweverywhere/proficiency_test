@@ -4,7 +4,7 @@
 * Question 6:
 * Using the language of your choice, demonstrate resizing an image
 *
-* My solution relies on GD image library
+* My solution depends on GD Library
 *
 */
 
@@ -84,7 +84,7 @@ if (file_exists($filepath))
 			// interger that spcifies image quality
 			$scaleQuality = round(($imageQuality/100) * 9);  			
 			$invertScaleQuality = 9 - $scaleQuality; 
-			 
+
 			// test to see if png image type is supported
 			if (imagetypes() & IMG_PNG) {  
 				imagepng($newImageAtSize, $savePath, $invertScaleQuality);  
